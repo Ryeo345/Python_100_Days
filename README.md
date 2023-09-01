@@ -1,1 +1,1 @@
-# This a repo of my 100 days of progress in learning Python, by learning the fundamentals of python and building small projects to test my skills. 
+# This repository serves as a record of my 100-day journey dedicated to mastering Python. During this time, I will focus on grasping the core principles of Python and applying them through a series of small-scale projects, allowing me to gauge and enhance my skillset.
