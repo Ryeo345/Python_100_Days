@@ -1,0 +1,46 @@
+Python Day 4 Methods and functions
+
+ex. append(), pop(), insert(), help()
+
+functions in python need the def keyword, correct indentation and proper structure
+
+def keyword is used to initiate the function
+
+class calls use camelClass while functions use snake_case
+
+def name_of_function():
+	'''
+		Docstring explains function (multiple lines of comments)
+	'''
+	print("hello')
+
+name_of_function() # calls the function
+
+return keyword allows us to save the result of the function to a variable
+
+use the print methods in the functions to debug/ see whats going on internally in the function
+
+#############
+function with logic
+
+tuple unpacking
+
+##################
+
+*args and **kwargs
+
+https://apprenticeships.me/
+
+google engineer software engineer early career
+
+pinterest - early career
+
+meta - early career
+
+linkedin reach program 
+
+https://careers.linkedin.com/reach
+
+search meetup coding groups
+
+builtinnyc

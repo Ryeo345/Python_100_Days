@@ -1,0 +1,46 @@
+Python Day 1 - Data Types
+
+print("") in python is equal to console.log("") in javaScript
+
+\n creates a new line to reduce the amount of print keywords used
+
+if there is a indent on a print - there will be a indentationError: unexpected indent
+
+input() function pauses the code until the user enters an input
+
+ex. input("A prompt for the user") to input the data we want
+
+# in Python is equal to // in javaScript
+
+print("Hello " + input("What is your name?"))
+
+len() - function to get the length of the string
+
+str is a keyword in python so we can't name it str
+
+exercise to print the length of a name
+
+print(len(input("What is your name? ")))
+
+
+you can assign a variable to the input entered from the user
+
+name = input("what is your name?")
+
+the variables are changed from top to bottom similar to javascript
+
+In Python we use snake_case and in javaScript we use camelCase
+
+incorrect name of variable we get a name error
+
+Data Types
+integers - int: 1 2 3
+floating point - float 4.6 100.0
+strings - str
+
+Data Structures
+lists - list  - similar to arrays in javascript
+dictionaries - dict (unordered key:value pairs) similar to objects in javascript
+tuples - tup - ordered immutable sequence of objects that are enclosed by () - similar to arrays in javascript but arrays are mutable
+sets - set - unordered collection of unique objects: {"a", "b"} - similar to the set object in javascript that has unique values
+booleans - bool - logical value of true or false

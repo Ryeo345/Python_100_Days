@@ -1,0 +1,142 @@
+Python Day 3 - Control Flow and logical operators / loops in python
+
+syntax for if and else conditions
+
+if condition:
+	do this
+else:
+	do this
+
+use == for equal in python
+
+% modulo returns the remainder
+
+elif condition 2:
+ else if in javascript
+
+Logical Operators
+
+A and B
+C or D
+not E
+
+for strings
+
+.count() returns the number of occurences of a char
+.lower() lowercases the word
+
+######################################
+
+syntax for a for loop
+
+my_iterable = [1, 2, 3]
+
+for item_name in my_iterable:
+	print(item_name)
+
+tuple unpacking
+mylist = [(1,2), (3,4), (5,6), (7, 8)]
+
+recreate the tuple structure
+then unpack the tuple
+
+for (a, b) in mylist:
+	print(a)
+	print(b)
+
+
+# looping through a dictionary only iterates through the keys
+d = {'k1': 1, 'k2':2, 'k3':3}
+
+for item in d:
+    print(item)
+
+# iterate through the items themselves
+# tuple unpacking
+for key, value in d.items():
+  print(value)
+
+# dictionaries are not sorted, no guarantee you will get the key and values back in the same order
+
+
+########################################
+
+syntax of a while loop
+
+while some_boolean_condition:
+	#do something
+
+can combien while and else statement
+
+the else statement will execute once the while loop ends
+
+python relies on the white space thats why in a for loop we can use the keyword pass to prevent the code from breaking
+
+break keyword ends the loop
+
+continue keyword goes to the next iteration
+
+
+# for num in range(3, 10, 2):
+#   print(num)
+
+# print(list(range(0, 11, 2)))
+
+# index_count = 0
+
+# for letter in 'abcde':
+#   print('At index {} the letter is {}'.format(index_count, letter))
+#   index_count += 1
+
+# first parameter is the index, the second one is the char value
+
+word = 'abcde'
+
+for item in enumerate(word):
+  print(item)
+
+# returns a tuple with index counting 
+# tuple unpacking
+
+for index, letter in enumerate(word):
+  print(index)
+  print(letter)
+
+# enumerate returns the index and the element at that iteration
+# many functions in python return tuples
+
+#zip operator is useful for combining lists together
+
+#in keyword, easy way to determine if the string or list has the object, and keys in dictionaries
+
+# min() min for minimum value in list
+max() max for maximum value in list
+
+##########################################################
+import functions from python built in library
+
+from random import shuffle
+
+mylist = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+random_list = shuffle(mylist)
+
+print(mylist)
+
+from random import randint
+print(randint(0, 100))
+
+list comprehension - similar to intializing a empty array and looping in the characters to each index
+# unreadable
+this is a flatten out for loop
+
+mystring = 'hello'
+
+mylist = [letter for letter in mystring]
+
+
+st = 'Create a list of the first letters of every word in this string'
+words = st.split()
+
+print([word[0] for word in words])
+
+# this list comprehension first loops through all the words in the words list and replaces them with the first letter of each word with word[0], similar to map method in javascript

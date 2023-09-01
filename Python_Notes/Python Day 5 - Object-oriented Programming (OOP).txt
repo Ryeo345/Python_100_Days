@@ -1,0 +1,155 @@
+Python Day 5 - OOP
+
+Object-oriented programming allows programmers to create there own objects that have methods and attributes
+
+str, list, dictionary have built-in methods 
+
+allows us to create code that is repeatable and organized which is especially useful whenn we scale up our code
+
+class keyword is used to define an object
+
+objects are somethings called classes in python
+
+the name of the class follows camelCasing
+
+class NameOfClass():
+
+variables and function names are lowercase
+
+the functions in the class are called methods:
+
+def _init_(self, param1, param2):
+	self.param1 = param1
+	self.param2 = param2
+
+this method is important to create an instance of the object
+
+the method has 2 params plus the self keyword, the parameters are assigned to the attritbutes of the object
+
+def some_method(self):
+	print(self.params1)
+
+
+class keyword is used to define a user defined object
+
+class is blueprint that defines the nature of a future object
+from class we can construct an (instance) of an object and an instance a specific object created from a particular class
+
+class Dog():
+  
+  # class object attribute (goes before the constructor function)
+  # same for any instance of a class
+
+  species = "mammal"
+  
+  def __init__(self, breed, name, spots): #constructor function for a class
+    self.breed = breed # attribute are characteristics of the object
+# we taking in the argument
+# assign it using the self.attribute_name
+    self.name = name
+    self.spots = spots
+
+  #operations/actions (methods)
+  def bark(self, number):
+    print("WOOF! My name is {} and the number is {}".format(self.name, number))
+# must reference the name of the instance
+new_dog = Dog(breed="shiba inu", name="Money", spots=False)
+
+print(new_dog.breed)
+print(new_dog.name)
+print(new_dog.spots)
+print(new_dog.species)
+
+#  what is the difference between functions and methods?
+# methods are functions in a clas that will work with the object
+new_dog.bark(number= 4)
+
+========================second example of class object=================================
+class Circle():
+  # class object attribute
+  pi = 3.14
+
+  # constructor function
+  def __init__(self, radius=1):
+    self.radius = radius
+    self.area = radius ** 2 * self.pi # or Circle.pi 
+
+  # method
+  def get_circumference(self):
+    return self.radius * self.pi * 2 # or Circle.pi for readability
+
+my_circle = Circle(5)
+print(my_circle.get_circumference())
+
+print(my_circle.pi)
+print(my_circle.radius)
+print(my_circle.area)
+
+inheritance and polymorphism
+
+inheritnace - is used to form new classes with classes that are already defined
+
+- essential for reusable code and lessen the complexity of the code
+
+derived class inherits from a base class
+
+class Animal():
+
+class Dog(Animal): # inheritances
+
+derived class derives the methods and the attributes from the base class
+
+polymorphism - the way in which different object classes can share the same method
+
+Abstraction - is a class that never expects to be instantiated, instead used as an base class for other classes to inherit from
+
+Encapsulation - used to manage and hide internal details of an object - to package methods, attributes and variables into a class
+
+examples of real world to describe inheritance would be how books all have pages and then we can refer to specific books like fiction books, and nonfiction books, both have pages_count, covers, author page that they can inherit. Non fiction books will be different than fiction books , because it might have reference page to source its information where as fiction books are made up.
+
+examples of abstraction for the books example would be how the book is organized with table of contents, and publishing pages, we may or may not know the info is there but we don't know how its structured.
+
+examples of encapulsation for a book if the book is in a library, or behind a paywall, or hard cover to protect and manage the data/info from spreading maybe because the info has value and it would lose value if too many people know about it, or the books is structured in a way to display info for reader to understand. Hard cover would be the move tangible idea of physical protection for the book.
+
+examples of polymorphism would be when two different books like comic books and scienitifc textbooks, both have images, however one is for storyline and the other is for diagrams
+
+
+How do I use built-in python methods on objects/classes that I created myself?
+
+we use magic/dunder special methods
+
+when you want to use the built-in python methods like print() or len()
+
+we need to add special methods like __str__ or __len__ or __del__ within the class that we create
+
+
+ class Book():
+  def __init__(self, title, author, pages):
+    self.title = title
+    self.author = author
+    self.pages = pages
+
+  def __str__(self):
+    return (f"My book is called {self.title} and the author is {self.author}")
+
+  def __len__(self):
+    return self.pages
+
+  def __del__(self):
+    print("A book object has been deleted")
+
+# need to return and not print for the special dunder method
+
+my_book = Book("Python", "Monty", 300)
+
+print(my_book) # uses the special str method in the class I created
+print(str(my_book))
+print(len(my_book))
+
+# to delete the book from memory (need to use del keyword)
+# want to outout a statement saying we deleted a book (use __del__)
+
+del(my_book)
+
+print(my_book) # returns book not defined
+
