@@ -14,7 +14,7 @@ use type() - function to check the type of any variable
 static typing
 C++ that requires you declare the correct data type (str for string, int for integer)
 
-Strings- ordered sequences 
+Strings- ordered sequences
 - can use indexing and slicing to grab sub-sections
 - indexing uses [] notation similar to javascript strings (can grab a single character from the string)
 
@@ -23,7 +23,7 @@ python can do reverse indexing      0 -4 -3 -2 -1
 
 my_string = "abcdefghijk"
 my_string[2] # c
-my_string[2:] # the colon in the suare bracket slices the string
+my_string[2:] # the colon in the square bracket slices the string
 # cdefghijk
 my_string[:2]
 my_string[::2] # third parameter
@@ -132,9 +132,5 @@ mylist = [1,1,2,2,3,3]
 new_set = set(mylist)
 print(new_set)
 
-
-# 100 Days of Python Day 2
-
-can use typecasting to change one datatype to another
 
 
