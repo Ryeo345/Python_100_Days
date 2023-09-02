@@ -1,0 +1,15 @@
+modules are code that have been split up to make it easier for coders to use and work on
+
+an example of a module is the random module which we can import from python libraries
+
+we can create our own modules by creating another python file, assigning a variable in the file and import the new file
+then using an attribute from the file
+
+ex. new_module
+name = Phil
+
+import new_module
+print(new_module.name) # phil
+
+When working with list, one of the most common errors is list index out of range indexError
+the index has to be in the range of the length of the list minus 1 since lists are 0 indexed
