@@ -53,7 +53,7 @@ chosen_word = random.choice(word_list) # this one line of code is the same as th
 
 lives = 6
 
-print(f"chosen word: {chosen_word}")
+# print(f"chosen word: {chosen_word}")
 
 word_length = len(chosen_word)
 # display = []
@@ -62,7 +62,8 @@ word_length = len(chosen_word)
 # print(display)
 
 display = ["_"] * word_length # faster way to do the above code
-
+print(display)
+print(stages[lives])
 end_of_game = False
 # while "_" in display:
 while not end_of_game:
@@ -82,6 +83,7 @@ while not end_of_game:
         if lives == 0:
             end_of_game = True
             print(" You Lose.")
+            print(f"chosen word: {chosen_word}")
         else:
             print(f"You guessed {guess}, that's not in the word. You lost a life.")
 
