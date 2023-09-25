@@ -25,7 +25,7 @@ operations = {
 # interesting that you can put functions as values in a dictionary
 def calculator():
     print(logo) # we add the logo inside the
-    num1 = int(input("What is the first number?\n"))
+    num1 = float(input("What is the first number?\n"))
     # num2 = int(input("What is the second number?\n"))
 
     # for operator in operations:
@@ -54,7 +54,7 @@ def calculator():
     while should_continue:
         operation_symbol = input("Pick an operation: ")
         calculation_function = operations[operation_symbol]
-        next_num = int(input("What is the next number?\n"))
+        next_num = float(input("What is the next number?\n"))
         answer = calculation_function(num1, next_num)
         print(f"{num1} {operation_symbol} {next_num} is {answer}")
         if input(f"Type 'y' to continue with {answer} or 'n' to exit.\n") == 'y':
