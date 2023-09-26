@@ -70,16 +70,25 @@ import random
 card = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 def calculate(hand):
-    return sum(hand)
+    if sum(hand) > 21 and 11 in hand:
+        first_idx_with_ace = hand.index(11)
+        hand[first_idx_with_ace] = 1
+        return sum(hand)
+    else:
+        return sum(hand)
+
+
+
 def deal_cards():
     print(logo)
     player_cards = [random.choice(card), random.choice(card)]
     computer_cards = [random.choice(card), random.choice(card)]
-    print(f"Your hand is consisting of {player_cards}")
-    print(f"The dealer's first card is {computer_cards[0]}")
 
     player_total = calculate(player_cards)
     computer_total = calculate(computer_cards)
+
+    print(f"Your hand is consisting of {player_cards}")
+    print(f"The dealer's first card is {computer_cards[0]}")
     while player_total < 21:
         continue_game = input("Would you like to hit? Enter 'y' or 'n' \n")
 
@@ -99,7 +108,9 @@ def deal_cards():
             elif computer_total == 21:
                 return "The Computer Wins. You Lose!"
             else:
-                if player_total > computer_total:
+                if player_total == computer_total:
+                    return "It's a draw"
+                elif player_total > computer_total:
                     return f"You win with a total of {player_total}."
                 else:
                     return f"The Computer wins with a total of {computer_total}."
