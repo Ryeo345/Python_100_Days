@@ -17,14 +17,16 @@ def get_random_star(data):
 
 def compare(a, b):
     if a["follower_count"] > b["follower_count"]:
-        return "A"
+        return "a"
     else:
-        return "B"
+        return "b"
+
+account_B = get_random_star(data)
 
 continue_game = True
 score = 0
 while continue_game:
-    account_A = get_random_star(data)
+    account_A = account_B
 
     # output the print statement with the object data
     print(f"Compare A: {account_A['name']}, a {account_A['description']}, from {account_A['country']}.")
@@ -36,8 +38,9 @@ while continue_game:
     print(f"Against B: {account_B['name']}, a {account_B['description']}, from {account_B['country']}.")
 
     #take a guess as an input
-    guess = input("Who has more followers? Type 'A' or 'B' ")
-
+    guess = input("Who has more followers? Type 'A' or 'B' ").lower()
+    print('\n' * 100)
+    print(logo)
     if guess == compare(account_A, account_B):
         score += 1
         print(f"You are correct. Current Score: {score}")
