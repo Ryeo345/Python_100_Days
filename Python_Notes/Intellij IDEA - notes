@@ -1,0 +1,11 @@
+Using the Python editor automatically tells us the styling guide so other Python developers will know we are using Python conventions
+
+Structure tab on the left side breaks up the Python file into variables and functions for easy access if the python file is too large
+- can use refactor to rename the function and the function calls throughout the python file
+
+In file, local history, we can use show history to see all the changes to the code in the past few hours, so we can revert or edit the code
+to its previous state
+
+Intellij and PyCharm have spell-check that is useful for variables and dictionary calls
+
+#TODO are easier to track in a professional IDE
