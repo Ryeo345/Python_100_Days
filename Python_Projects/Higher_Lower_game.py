@@ -1,5 +1,6 @@
 # add the logos and data from the other modules
-
+# randomize the data that is being compared
+import random
 import sys
 sys.path.append("../Python_modules")
 from Higher_lower_art import logo, vs
@@ -7,19 +8,21 @@ from Higher_lower_game_data import data
 
 print(logo)
 
-# randomize the data that is being compared
-
 # get randint for random index
-import random
+
+
+
 def get_random_star(data):
     random_star = random.choice(data)
     return random_star
+
 
 def compare(a, b):
     if a["follower_count"] > b["follower_count"]:
         return "a"
     else:
         return "b"
+
 
 account_B = get_random_star(data)
 
@@ -37,7 +40,7 @@ while continue_game:
     account_B = get_random_star(data)
     print(f"Against B: {account_B['name']}, a {account_B['description']}, from {account_B['country']}.")
 
-    #take a guess as an input
+    # take a guess as an input
     guess = input("Who has more followers? Type 'A' or 'B' ").lower()
     print('\n' * 100)
     print(logo)
