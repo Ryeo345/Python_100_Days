@@ -1,0 +1,18 @@
+OOP is modular and better than procedural programming which gets more confusing as we write more code
+
+OOP modes after real things in the world
+
+classes are blueprints that can create many objects of the same kind
+
+class Waiter:
+    def __init__(self, name):
+        self.name = name
+
+object = Class()
+the parentheses activates the constructor of the function
+henry = Waiter()
+Emily = Waiter()
+
+attributes can be retrieved from the object
+
+functions that are tied to an object are called methods
